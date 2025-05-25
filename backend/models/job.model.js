@@ -36,13 +36,13 @@ const jobSchema=new mongoose.Schema({
     },
     company:{
         type:mongoose.Schema.Types.ObjectId,
-        ref:"company",
+        ref:"Company",
         required:true,
     },
     created_by:{
         type:mongoose.Schema.Types.ObjectId,
         ref:"User",
-        requied:true
+        required:true
     },
     application:[{
         type:mongoose.Schema.Types.ObjectId,
@@ -52,6 +52,6 @@ const jobSchema=new mongoose.Schema({
 
 },{timestamps:true});
 
-export const job=mongoose.model('job',jobSchema);
+export const Job=mongoose.model('Job',jobSchema);
 
 
